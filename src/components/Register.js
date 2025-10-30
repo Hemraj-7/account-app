@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { use, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function Register() {
@@ -10,14 +10,17 @@ function Register() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // Name validation pattern
+    const namePattern = /^[A-Za-z\s]{2,}$/;
+
     // Email validation pattern
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     // Password validation pattern
     const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
 
-    if (user.name.length < 3) {
-      alert('Name must be at least 3 Characters');
+    if (user.name.length < 3 || !namePattern.test(user.name)) {
+      alert('Name must contain only letters and be at least 3 characters long.');
       return;
     }
 

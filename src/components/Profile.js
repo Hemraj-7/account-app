@@ -15,13 +15,14 @@ function Profile() {
 
     const handleSave = () => {
 
-        if (user.name.length < 3) {
-            alert(`Don't kidding with me, The name is too short. Name must be at least 3 Characters`);
-            return;
-        }
-
+        const namePattern = /^[A-Za-z\s]{2,}$/;
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
+
+        if (user.name.length < 3 || !namePattern.test(user.name)) {
+            alert(`Name must contain only letters and be at least 3 characters long.`);
+            return;
+        }
 
         if (!emailPattern.test(user.email)) {
             alert('Please enter a valid email address (e.g., name@example.com).');
