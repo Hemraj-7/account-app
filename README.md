@@ -25,7 +25,7 @@ Built for a React internship practical test using **React (v19.2.0)**, **Bootstr
 - Logout clears session data.
 
 ✅ **Routing**
-- Uses **React Router v6** for navigation between pages.
+- Uses **React Router Dom v7** for navigation between pages.
 
 ✅ **Styling**
 - Simple, clean layout built using **Bootstrap 5**.
