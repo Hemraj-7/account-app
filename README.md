@@ -43,6 +43,38 @@ Built for a React internship practical test using **React (v19.2.0)**, **Bootstr
   - A ❌ (too short)
   - John123 ❌ (numbers not allowed)
 
+---
+
+### ✉️ Email Validation
+- Must follow a **standard email format** (e.g., `username@domain.com`).
+- Cannot contain spaces or invalid characters.
+- Validation is performed using the regex pattern: /^[^\s@]+@[^\s@]+.[^\s@]+$/
+- Examples:
+  - name@example.com ✅  
+  - john.doe@gmail.com ✅  
+  - user@domain ❌ (missing `.com`)  
+  - user@@mail.com ❌ (invalid syntax)
+
+---
+
+### 🔒 Password Validation
+The password must:
+- Be **at least 6 characters long**.
+- Contain **at least one letter (A–Z, a–z)**.
+- Contain **at least one number (0–9)**.
+- Contain **at least one special character** (`@$!%*?&`).
+- Validation is performed using the regex pattern: /^(?=.[A-Za-z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%*?&]{6,}$/
+- Examples of **valid passwords**:
+  - React@123 ✅  
+  - User!2025 ✅  
+  - Hello$1 ✅  
+  - Examples of **invalid passwords**:
+  - abc123 ❌ (no special character)  
+  - password@ ❌ (no number)  
+  - Pass12 ❌ (no special character)  
+
+---
+
 
 ## Installation
 1. Clone the repository:
