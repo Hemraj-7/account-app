@@ -1,7 +1,7 @@
 # React Account Management App
 
 A simple React application that allows users to **register, log in, view, and edit their profile**.  
-Built for a React internship practical test using **React (v18+)**, **Bootstrap**, and **React Router Dom**.
+Built for a React internship practical test using **React (v19.2.0)**, **Bootstrap**, and **React Router Dom**.
 
 ---
 
@@ -9,7 +9,7 @@ Built for a React internship practical test using **React (v18+)**, **Bootstrap*
 
 ✅ **User Registration**
 - Users can create an account by providing:
-  - **Name**: Must contain only letters (A–Z, a–z) and be at least 2 characters long.
+  - **Name**: Must contain only letters (A–Z, a–z) and be at least 3 characters long.
   - **Email**: Must be a valid email address (e.g., name@example.com).
   - **Password**: Must meet strength requirements (see below).
 - Invalid input triggers custom alert messages for clear feedback.
@@ -36,8 +36,12 @@ Built for a React internship practical test using **React (v18+)**, **Bootstrap*
 
 ### 🧍 Name Validation
 - Must contain only letters (A–Z, a–z) and spaces.
-- Must be at least **2 characters long**.
+- Must be at least **3 characters long**.
 - Examples:
+  - John Doe ✅
+  - Alice ✅
+  - A ❌ (too short)
+  - John123 ❌ (numbers not allowed)
 
 
 ## Installation
