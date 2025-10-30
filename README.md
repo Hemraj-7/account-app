@@ -68,7 +68,7 @@ The password must:
   - React@123 ✅  
   - User!2025 ✅  
   - Hello$1 ✅  
-  - Examples of **invalid passwords**:
+- Examples of **invalid passwords**:
   - abc123 ❌ (no special character)  
   - password@ ❌ (no number)  
   - Pass12 ❌ (no special character)  
